@@ -1,0 +1,24 @@
+{
+  "name": "googlebooks-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "bun server/src/server.ts",
+    "develop": "concurrently \"cd server && bun run watch\" \"cd client && bun run dev\"",
+    "install": "cd server && bun i && cd ../client && bun i",
+    "build": "cd client && bun run build",
+    "render-build": "bun install && bun run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2"
+  }
+}
